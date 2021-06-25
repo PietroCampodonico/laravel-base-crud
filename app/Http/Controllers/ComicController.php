@@ -69,8 +69,11 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+
+        return view("comics.edit", compact("comic"));
     }
+        
 
     /**
      * Update the specified resource in storage.
@@ -81,7 +84,12 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        $comicData = $request->all();
+
+        $comic->update($comicData);
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
@@ -90,8 +98,10 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return redirect()->route('comics.index');   
     }
 }
