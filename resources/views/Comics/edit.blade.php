@@ -1,3 +1,9 @@
+@extends('layout.default_layout')
+
+@section('page_title', 'My Landing Page')
+
+@section('main_content')
+
 <a href="{{ route('comics.index') }}">Torna alla Home</a>
 
 <form action="{{ route('comics.update', $comic->id) }}" method="post">
@@ -13,3 +19,4 @@
     <input type="submit" value="Delete">
 
 </form>
+@endsection

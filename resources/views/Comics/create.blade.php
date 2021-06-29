@@ -1,3 +1,9 @@
+@extends('layout.default_layout')
+
+@section('page_title', 'My Landing Page')
+
+@section('main_content')
+
 <form action="{{ route('comics.store') }}" method="post">
     @csrf
 
@@ -9,3 +15,4 @@
 
     <input type="submit" value="Confirm">
 </form>
+@endsection

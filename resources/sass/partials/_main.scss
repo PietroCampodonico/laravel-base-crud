@@ -1,0 +1,263 @@
+
+main section.row.top {
+    background-color: $background_secondary_color;
+    padding: $spacing 0;
+
+    .wrapper {
+        @include flex_align_center;
+        position: relative;
+
+        button {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            transform: translateY(-50%);
+            &:hover {
+                text-decoration: unset;
+                cursor: unset;
+            }
+        }
+    }
+
+    .comics-card {
+        @include default_card_dimensions;
+        margin: $spacing $spacing/3;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+        }
+        
+        .thumbnail-container {
+           @include default_card_dimensions;
+            overflow: hidden;
+        }
+
+        h4 {
+            margin: $spacing/3 0;
+
+            a {
+                color: $font_color;
+            }
+        }
+    }
+
+    .btn-container {
+        @include flex_justify_center;
+        margin-top: $spacing*2;
+    }
+}
+
+main section.row.bottom {
+    background-color: $background_primary_color;
+
+    .wrapper {
+        display: flex;
+    }
+
+    .card {
+        @include flex_align_justify_center;
+        flex-basis: calc(100% / 5);
+        margin: $spacing 0;
+
+        * {
+            vertical-align: middle;
+            text-transform: uppercase;
+            color: $font_color;
+        }
+
+        .icon-container {
+            @include default_icon_container;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        a {
+            padding-left: 10px;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+main .stripe {
+    background-color: $background_primary_color;
+    height: 75px;
+
+    .img-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translateY(-85%);
+        max-height: 250px;
+        max-width: 175px;
+        border: 1px solid white;
+        overflow: hidden;
+
+        button {
+            position: absolute;
+            padding: 5px $spacing/3;
+
+            &.bottom-btn {
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+}
+
+main .comic-specifics {
+    padding: $spacing*2 0;
+
+    .wrapper {
+        display: flex;
+    }
+
+    h1 {
+        color: #124261;
+        margin-bottom: $spacing;
+    }
+}
+
+main .availability {
+    background-color: $backgrount_quaternary_color;
+    @include flex_align_center;
+
+    &>[class^="col-"] {
+    @include flex_align_center;
+    }
+
+    P, select {
+        color: $font_color_tertiary;
+        padding: $spacing/3;
+
+        span, option {
+            color: $font_color;
+        }
+    }
+
+    select {
+        width: 100%;
+        background-color: transparent;
+
+        //da rivedere
+        border: none;
+        outline: none;
+    }
+
+    .col-9 {
+        justify-content: space-between;
+        border-right: 1px solid rgba(128, 128, 128, .9);
+    }
+}
+
+main .comic-description {
+    padding-top: $spacing/3;
+    max-height: 150px;
+    overflow: auto;
+}
+
+//DA RIVEDERE
+main .advertisement {
+    position: relative;
+
+    img {
+        max-height: 175px;
+    }
+
+    h5 {
+        position: absolute;
+        top: -20px;
+        right: 0;
+        transform: translateX(-75%);
+    }
+}
+
+main .additional-info {
+    background-color: #f6f6f6;
+
+    .wrapper {
+        display: flex;
+        padding: $spacing 0;
+
+        &>.col-8 {
+            padding-right: $spacing*2;
+        }
+    }
+
+    a {
+        color: #7dbfe3;
+        font-weight: bold;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        &:not(:last-of-type)::after {
+            content: ",";
+            color: black;
+        }
+    }
+
+    h2 {
+       color: #124261;
+       margin-bottom: $spacing;
+    }
+
+    .line {
+        padding: $spacing/3 0;
+        border-top: 1px solid lightgray;
+        display: flex;
+
+        &:last-of-type {
+            border-bottom: 1px solid lightgray;
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        .comic-series {
+            text-transform: uppercase;
+        }
+    }
+}
+
+main .utility-links {
+    border-top: 1px solid lightgray;
+    
+    .wrapper, .col-3 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .wrapper {
+        padding: 0;
+    }
+
+    .col-3 {
+        padding: $spacing/3 $spacing/2;
+        border-left: 1px solid lightgray;
+
+        &:last-of-type {
+            border-right: 1px solid lightgray;
+        }
+
+        h5 {
+            text-transform: uppercase;
+            color: lightgrey;
+        }
+    }
+
+    .icon-container {
+        @include default_icon_container;
+        img {
+            background-color: grey;
+        }
+    }
+}

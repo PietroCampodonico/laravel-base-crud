@@ -1,0 +1,17 @@
+//Rows, cols and offsets rules
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: calc((100% / 12) * #{$i});
+    }
+
+    .offset-#{$i} {
+        width: calc((100% / 12) * #{$i});
+    }
+}
+
+.col-4, .offset-4 {
+    img, p {
+        margin-bottom: $spacing;
+    }
+}

@@ -1,0 +1,62 @@
+@mixin flex_align_justify_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin list_reset {
+    margin-left: 0;
+    list-style: none;
+} 
+
+@mixin flex_align_center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex_justify_center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex_dir_col {
+    flex-direction: column;
+    display: flex;
+}
+
+@mixin btn_default {
+    padding: 10px 35px;
+    background-color: $background_primary_color;
+    color: $font_color;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    &:focus {
+        outline: none;
+        opacity: 0.8;
+    }
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+@mixin small_logo_dimension {
+    max-height: 70px;
+    max-width: 70px;
+}
+
+@mixin default_icon_container {
+    width: 40px;
+    height: 40px;
+}
+
+@mixin default_card_dimensions {
+    max-height: 150px;
+    max-width: 150px;
+}
+
+@mixin social_logos_dimensions {
+    max-height: 35px;
+    max-width: 35px;
+}

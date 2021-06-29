@@ -1,0 +1,108 @@
+footer .row.top {
+
+    background-image: url("/images/footer-bg.jpg");
+    display: flex;
+
+    .wrapper {
+        display: flex;
+    }
+
+    .left {
+        display: flex;
+        padding: $spacing 0;
+
+        .ul-container {
+            display: flex; 
+            align-content: flex-start;
+            
+            ul {
+                display: unset;
+                margin-right: $spacing * 2;
+        
+                h3 {
+                    color: $font_color;
+                    text-transform: uppercase;
+                }
+        
+                a {
+                    text-transform: capitalize;
+                    color: $font_color_secondary;
+                    &:hover {
+                        text-decoration: underline;
+                    } 
+                }
+                   
+            }       
+        }    
+
+        .disclaimer-container {
+            margin-top: $spacing;
+
+            p {
+                color: $font_color_secondary;
+    
+                a {
+                    color: $background_primary_color;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .big-logo-container {
+        height: 100%;
+
+        position: relative;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: -100px;
+            height: 150%;
+            opacity: 0.9;
+        }
+    }
+}
+
+footer .row.bottom {
+    background-color: $background_tertiary_color;
+    padding: $spacing 0;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }    
+    
+    button {
+        border: 2px solid $background_primary_color;
+        background-color: transparent;
+
+        &:hover {
+            text-decoration-color: $background_primary_color;
+        }
+    }
+
+    h3 {
+        color: $background_primary_color;
+        text-transform: uppercase;
+    }
+
+    .right {
+        @include flex_align_center;
+
+        *{
+            margin-right: $spacing/2;
+        }
+
+        .icon-container {
+            @include social_logos_dimensions;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

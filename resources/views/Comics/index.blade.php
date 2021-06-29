@@ -1,3 +1,8 @@
+@extends('layout.default_layout')
+
+@section('page_title', 'My Landing Page')
+
+@section('main_content')
 <a href="{{ route('comics.create') }}">Add your comic...</a>
 
 <table>
@@ -30,3 +35,4 @@
     </tbody>
 
 </table>
+@endsection
